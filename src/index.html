@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center">
+    <div class="max-w-md w-full p-6   rounded-lg shadow-md md:max-w-xl lg:max-w-3xl">
+        <h1 class="text-3xl mb-6 text-center">Weather App</h1>
+        <div class="flex flex-col md:flex-row items-center mb-4">
+            <button id="getCurrentLocationBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md mb-2 md:mb-0">Get Current Location</button>
+            <input id="searchInput" type="text" placeholder="Enter city name" class="flex-1 p-2 rounded-l-md border rounded-md text-gray-800 focus:outline-none focus:border-blue-500 mb-2 md:mb-0 md:mr-2">
+            <button id="searchBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md border border-blue-500 hover:bg-blue-600 focus:outline-none">Search</button>
+        </div>
+        <div class="mb-6">
+            <label for="recentCities" class="block  mb-2 text-sm">Recently Searched Cities:</label>
+            <select id="recentCities" class="border rounded-md border-gray-300 px-4 py-2 w-full">
+                <!-- Options will be dynamically added here -->
+            </select>
+        </div>
+        <div id="weatherInfo" class="text-center mb-6"></div>
+        <div id="forecast" class="grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
